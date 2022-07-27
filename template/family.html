@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Family</title>
+        <style>
+            .family-member-li {
+                display: flex;
+                flex-direction: column;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Family</h1>
+        <h2>These are my family members</h2>
+        
+        <!-- ul : Unordered List -->
+        <ul>
+            <!-- li : List Item -->
+            
+            
+            {% for member in members %}
+                <li class="family-member-li">
+                    <span><b>Nombre:</b> {{member.name}}</span>
+                    <span><b>Edad:</b> {{member.edad}}</span>
+                    <span><b>Fecha de nacimiento:</b> {{member.fecha_nacimiento}}</span>
+                </li>
+            {% endfor %}
+        </ul>    
+    </body>
+
+</html>
